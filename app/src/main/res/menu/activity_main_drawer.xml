@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="" />
+        <item
+            android:id="@+id/profileFragment2"
+            android:icon="@drawable/profile_icon"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/tasksFragment"
+            android:icon="@drawable/task_icon"
+            android:title="@string/menu_task" />
+
+        <item
+            android:id="@+id/manifestFragment"
+            android:icon="@drawable/manifest_icon"
+            android:title="@string/menu_manifest" />
+
+        <item
+            android:id="@+id/notificationsFragment"
+            android:icon="@drawable/notification_icon"
+            android:title="@string/menu_notification" />
+        <item
+            android:id="@+id/menu_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/menu_logout"
+            />
+
+
+    </group>
+</menu>
