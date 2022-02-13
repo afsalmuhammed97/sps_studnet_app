@@ -6,4 +6,13 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+    <dimen name="tittle_text_large"> </dimen>
+    <dimen name="tittle_text_medium">30sp </dimen>
+    <dimen name="tittle_text_mediumS">28</dimen>
+    <dimen name="medium_text"> 24sp</dimen>
+    <dimen name="tittle_text_small">22sp</dimen>
+
+
 </resources>

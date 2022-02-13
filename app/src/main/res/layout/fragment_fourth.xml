@@ -30,7 +30,7 @@
         android:layout_marginHorizontal="20dp"
         android:text="@string/acceleration"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="@dimen/medium_text"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"

@@ -37,7 +37,7 @@
                   android:layout_height="wrap_content"
                   android:textColor="@color/black"
                   android:textAlignment="center"
-                  android:textSize="22sp"
+                  android:textSize="@dimen/tittle_text_small"
                   android:textStyle="bold"
                   android:text="@string/signup"/>
 

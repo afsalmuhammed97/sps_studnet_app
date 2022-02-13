@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.practies.myapplication.ui.notification.NotificationFragment"
-        android:label=""
-        tools:layout="@layout/fragment_slideshow" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_slideshow"-->
+<!--        android:name="com.practies.myapplication.ui.notification.NotificationFragment"-->
+<!--        android:label=""-->
+<!--        tools:layout="@layout/fragment_slideshow" />-->
 
     <fragment
         android:id="@+id/nav_home"
@@ -35,12 +35,27 @@
         android:id="@+id/tasksFragment"
         android:name="com.practies.myapplication.ui.tasks.TasksFragment"
         android:label="fragment_tasks"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks" >
+
+
+        <action
+            android:id="@+id/action_tasksFragment_to_taskBotomSeetFragment"
+            app:destination="@id/taskBotomSeetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/notificationsFragment"
         android:name="com.practies.myapplication.ui.notification.NotificationsFragment"
         android:label="fragment_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <dialog
+        android:id="@+id/taskBotomSeetFragment"
+        android:name="com.practies.myapplication.ui.bottomSheet.TaskBotomSeetFragment"
+        android:label="fragment_task_botom_seet"
+        tools:layout="@layout/fragment_task_botom_seet" >
+        <action
+            android:id="@+id/action_taskBotomSeetFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </dialog>
 
 
 </navigation>
