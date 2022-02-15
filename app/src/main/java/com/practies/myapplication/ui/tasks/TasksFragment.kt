@@ -56,7 +56,7 @@ class TasksFragment : Fragment(), TaskAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-       Toast.makeText(context,"${position} clicked",Toast.LENGTH_SHORT).show()
+      // Toast.makeText(context,"${position} clicked",Toast.LENGTH_SHORT).show()
 
         findNavController().navigate(R.id.action_tasksFragment_to_taskBotomSeetFragment)
     }

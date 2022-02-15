@@ -1,7 +1,9 @@
 package com.practies.myapplication
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -26,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        setSupportActionBar(binding.appBarMain.toolbar)
+        setSupportActionBar(binding.toolbar)         //(binding.appBarMain.toolbar)
+      //  binding.toolbar.navigationIcon?.setTint(Color.WHITE)
+
+
 
 //        binding.appBarMain.fab.setOnClickListener { view ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -45,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        drawerAnimation()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,5 +63,40 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    private fun drawerAnimation(){
+        val scaleControl=6f
+        binding.apply {
+
+            drawerLayout.drawerElevation=0f
+            drawerLayout.setScrimColor(Color.TRANSPARENT)
+            drawerLayout.addDrawerListener(object :DrawerLayout.DrawerListener{
+
+                override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                    val slideX=drawerView.width*slideOffset
+                    constraint.translationX=slideX
+
+                     constraint.scaleY = 1-(slideOffset/scaleControl)
+
+                }
+
+                override fun onDrawerOpened(drawerView: View) {}
+
+                override fun onDrawerClosed(drawerView: View) {}
+
+                override fun onDrawerStateChanged(newState: Int) {}
+
+            })
+
+
+
+
+
+
+
+
+        }
+
     }
 }

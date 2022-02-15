@@ -37,7 +37,7 @@ class SplashScreenFragment : Fragment() {
           findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment)
 
 
-      },2000)
+      },1000)
 
 
         return inflater.inflate(R.layout.fragment_splash_screen, container, false)
