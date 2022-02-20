@@ -9,6 +9,7 @@
         <item name="colorSecondary">@color/teal</item>
         <item name="colorSecondaryVariant">@color/purple_700</item>
         <item name="colorOnSecondary">@color/white</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -23,7 +24,7 @@
 
     <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="ThemeOverlay.MyApplication.FullscreenContainer" parent="">
+    <style name="ThemeOverlay.MyApplication.FullscreenContainer" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
@@ -56,6 +57,8 @@
         <item name="cornerSizeTopLeft">16dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
         <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="backgroundColor">@color/teal_700</item>
+
     </style>
 
 

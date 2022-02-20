@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:layout_gravity="center"
-    tools:context=".LogIn.LogInFragment"
-    >
+    android:background="@drawable/background"
+    tools:context=".LogIn.LogInFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp"
         android:text="@string/sps"
         android:textColor="@color/white"
@@ -27,19 +26,22 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="294dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="32dp"
         android:foregroundGravity="center"
+        android:gravity="center_vertical"
+        android:singleLine="false"
         android:text="@string/career"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -67,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="15dp"
-                android:text="@string/login"
+                android:text="@string/sign_in"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/tittle_text_small"
@@ -85,8 +87,7 @@
                 android:ems="10"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:padding="15dp"
-                android:textColorHint="@color/black" />
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/editTextTextPassword"
@@ -99,8 +100,7 @@
                 android:ems="10"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:padding="15dp"
-                android:textColorHint="@color/black" />
+                android:padding="15dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,7 +122,7 @@
                     android:padding="4dp"
                     android:text="@string/forget_password"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
@@ -137,10 +137,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="0dp"
-                android:paddingHorizontal="25dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_shap"
+                android:paddingHorizontal="25dp"
                 android:shadowColor="@android:color/transparent"
                 android:text="@string/sign_in"
                 android:textAllCaps="false"
@@ -168,9 +168,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:textAllCaps="false"
-                    android:text="@string/signup"
                     android:background="#00000000"
+                    android:text="@string/signup"
+                    android:textAllCaps="false"
                     android:textColor="@color/purple_700"
 
                     />
@@ -181,6 +181,7 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

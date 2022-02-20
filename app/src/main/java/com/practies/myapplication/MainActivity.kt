@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private lateinit var listener: NavController.OnDestinationChangedListener
+ //   private lateinit var listener: NavController.OnDestinationChangedListener
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,27 +29,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        setSupportActionBar(binding.toolbar)         //(binding.appBarMain.toolbar)
-      //  binding.toolbar.navigationIcon?.setTint(Color.WHITE)
+       setSupportActionBar(binding.appBarMain.toolbar)
+           // ActionBar.DISPLAY_HOME_AS_UP
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
 
-//        binding.appBarMain.fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.   navController.graph
-        appBarConfiguration = AppBarConfiguration(navController.graph    ,drawerLayout)
-             //   setOf(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
 
-//        setOf(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+        appBarConfiguration = AppBarConfiguration(    // navController.graph,drawerLayout)
+            setOf(
+            R.id.profileFragment2,
+            R.id.tasksFragment,
+            R.id.manifestFragment,
+            R.id.notificationsFragment,
+                R.id.homeFragment
 
+            ),drawerLayout
+        )
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
+      setupActionBarWithNavController(navController , appBarConfiguration)
+
         navView.setupWithNavController(navController)
         drawerAnimation()
     }
@@ -75,7 +80,8 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
                     val slideX=drawerView.width*slideOffset
-                    constraint.translationX=slideX
+                   constraint.translationX=slideX
+
 
                      constraint.scaleY = 1-(slideOffset/scaleControl)
 

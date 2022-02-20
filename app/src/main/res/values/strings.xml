@@ -47,6 +47,10 @@
     <string name="letsGetStart">Lets get started</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personal_work">Personal Workouts</string>
+    <string name="technical_work">Technical Workouts</string>
+    <string name="miscellaneous">Miscellaneous Workouts</string>
+
     <string name="home_page">home</string>
     <string name="name">profile name</string>
     <string name="dummy_button">Dummy Button</string>
@@ -143,4 +147,28 @@
     <string name="week">Week 1</string>
     <string name="img">img</string>
     <string name="Task">Tasks</string>
+    <string name="notification_demo">sample notification</string>
+    <string name="time">2 hour ago</string>
+    <string name="home">Home</string>
+    <string name="card_tittle">Technical  Worckout</string>
+    <string name="reviewer_name">Reviewer name</string>
+    <string name="reviewer">Reviewer :</string>
+    <string name="counselor">Counselor</string>
+    <string name="counselor_name">counselor name</string>
+    <string name="date">Date :</string>
+    <string name="review_date">review date</string>
+    <string name="review_status">Review status</string>
+    <string name="score">Score</string>
+    <string name="paning_topics">Pending</string>
+    <string name="pending_topic">pending topics</string>
+    <string name="domain">Domain</string>
+    <string name="d_ob">DoB</string>
+    <string name="Gender">Gender</string>
+    <string name="mobile">Mobile</string>
+    <string name="fathers_name">Father\'s Name</string>
+    <string name="fathers_contact">Father\'s contact</string>
+    <string name="mothers_name">Mother\'s name</string>
+    <string name="gardian">Gardian</string>
+    <string name="Relationship" />
+    <string name="relatioship">Relationship</string>
 </resources>
