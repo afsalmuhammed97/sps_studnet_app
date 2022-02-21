@@ -9,7 +9,8 @@ import com.practies.myapplication.model.Workout
 class WeekAdapter(val workoutList:ArrayList<String>):RecyclerView.Adapter<WeekAdapter.ViewHolder>() {
 
 
-    class ViewHolder(val binding: WeeksCardItemBinding):RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: WeeksCardItemBinding
+    ):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
           return  ViewHolder(WeeksCardItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))

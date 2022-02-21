@@ -171,4 +171,11 @@
     <string name="gardian">Gardian</string>
     <string name="Relationship" />
     <string name="relatioship">Relationship</string>
+    <string name="address">Communication Address</string>
+    <string name="village">Village :</string>
+    <string name="taluk">Taluk</string>
+    <string name="qulificatiion">Qualifications</string>
+    <string name="college">College</string>
+    <string name="experience">WorkExperience</string>
+    <string name="gov_id">Gov.id</string>
 </resources>

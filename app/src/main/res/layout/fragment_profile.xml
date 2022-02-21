@@ -20,12 +20,42 @@
         >
 
 
+        <TextView
+            android:id="@+id/college_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/college"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/qulification_text" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/experience"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/college_text" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/experience"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/college_text" />
+
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/circularImageView2"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="8dp"
             android:src="@drawable/ic_launcher_background"
             app:civ_border_width="0dp"
             app:civ_shadow="true"
@@ -37,9 +67,9 @@
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/email"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/mobile_no"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/gender" />
 
@@ -47,9 +77,9 @@
             android:id="@+id/mobile_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/mobile"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/fathers_name"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -57,9 +87,9 @@
             android:id="@+id/fathers_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/fathers_name"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/fathers_contact"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/mobile_no" />
 
@@ -67,9 +97,9 @@
             android:id="@+id/fathers_contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/fathers_contact"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/mothers_contact"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/fathers_name" />
 
@@ -77,9 +107,9 @@
             android:id="@+id/mothers_contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/mothers_name"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/garianText"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/fathers_contact" />
 
@@ -87,9 +117,9 @@
             android:id="@+id/garianText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/gardian"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/relation_text"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/mothers_contact" />
 
@@ -97,9 +127,10 @@
             android:id="@+id/relation_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/relatioship"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/garianText" />
 
@@ -107,32 +138,29 @@
             android:id="@+id/gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/Gender"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/email"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/dat_of_birth" />
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/qulification_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginEnd="231dp"
-            android:layout_marginBottom="52dp"
-            android:text="@string/name"
+            android:text="@string/qulificatiion"
             android:textSize="@dimen/text_14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/college_text"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/taluk_text" />
 
         <TextView
             android:id="@+id/dat_of_birth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/d_ob"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/gender"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/domainText" />
 
@@ -140,50 +168,51 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="32dp"
             android:text="@string/name"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/domainText"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
+            android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="37dp"
-            android:text="@string/name"
+            android:text="@string/village"
             android:textSize="@dimen/text_14sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView24"
-            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+            app:layout_constraintBottom_toTopOf="@+id/taluk_text"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/address_text" />
 
         <TextView
+            android:id="@+id/address_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="46dp"
-            android:layout_marginBottom="482dp"
-            android:text="@string/name"
+            android:text="@string/address"
             android:textSize="@dimen/text_14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/circularImageView2" />
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/taluk_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="55dp"
-            android:text="@string/name"
+            android:text="@string/taluk"
             android:textSize="@dimen/text_14sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView23"
-            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+            app:layout_constraintBottom_toTopOf="@+id/qulification_text"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <TextView
             android:id="@+id/domainText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/domain"
             android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/dat_of_birth"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -192,7 +221,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent=".05" />
+            app:layout_constraintGuide_begin="28dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"
@@ -200,6 +229,71 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.95" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="0dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="0dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/guideline6"
+            tools:layout_editor_absoluteY="518dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="361dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.45"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75"/>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/gov_id"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <ImageView
+            android:id="@+id/gov_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/input_feild_shap"
+            android:contentDescription="@string/gov_id"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline6"
+            tools:src="@tools:sample/avatars" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
