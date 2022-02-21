@@ -295,6 +295,18 @@
             app:layout_constraintTop_toTopOf="@+id/guideline6"
             tools:src="@tools:sample/avatars" />
 
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/edit"
+            android:src="@drawable/edit_icon"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

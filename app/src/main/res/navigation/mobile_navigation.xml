@@ -10,7 +10,11 @@
         android:id="@+id/profileFragment2"
         android:name="com.practies.myapplication.ui.profile.ProfileFragment"
         android:label=""
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_profileCompletionFragment"
+            app:destination="@id/profileCompletionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/manifestFragment"
         android:name="com.practies.myapplication.ui.manifest.ManifestFragment"
@@ -58,6 +62,11 @@
         android:name="com.practies.myapplication.ui.home.HomeFragment"
         android:label=""
         tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/profileCompletionFragment"
+        android:name="com.practies.myapplication.ui.profile.ProfileCompletionFragment"
+        android:label="fragment_profile_completion"
+        tools:layout="@layout/fragment_profile_completion" />
 
 
 </navigation>
