@@ -162,15 +162,16 @@
     <string name="paning_topics">Pending</string>
     <string name="pending_topic">pending topics</string>
     <string name="domain">Domain</string>
-    <string name="d_ob">DoB</string>
+    <string name="d_ob">DOB</string>
+    <string name="dat_of_birth">Date of birth</string>
     <string name="Gender">Gender</string>
     <string name="mobile">Mobile</string>
     <string name="fathers_name">Father\'s Name</string>
     <string name="fathers_contact">Father\'s contact</string>
     <string name="mothers_name">Mother\'s name</string>
-    <string name="gardian">Gardian</string>
+    <string name="guardian">Guardian</string>
     <string name="Relationship" />
-    <string name="relatioship">Relationship</string>
+    <string name="relationship">Relationship</string>
     <string name="address">Communication Address</string>
     <string name="village">Village :</string>
     <string name="taluk">Taluk</string>
@@ -179,4 +180,14 @@
     <string name="experience">WorkExperience</string>
     <string name="gov_id">Gov.id</string>
     <string name="edit">Edit</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="choose_domain">Choos your domain</string>
+    <string name="upload_id">Upload  Gov. id</string>
+    <string-array name="domains">
+        <item>Web Development with Node(MERN)</item>
+        <item>Web Development with Node(MEEN)</item>
+        <item>Mobile App Development with Flutter</item>
+        <item>Mobile App Development with Kotlin </item>
+        <item>Mobile App Development with Swift</item>
+    </string-array>
 </resources>

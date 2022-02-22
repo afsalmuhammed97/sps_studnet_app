@@ -1,14 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileCompletionFragment">
+    tools:context=".ui.profile.ProfileCompletionFragment"
+    android:background="@color/teal_700">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginHorizontal="@dimen/Horiz_margin"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/input_feild_shap"
+        android:backgroundTint="@color/white">
 
-</FrameLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/edit_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/fathers_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@id/left_guide"
+            app:layout_constraintRight_toRightOf="@id/right_guide"
+            app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:singleLine="true"
+                android:text="@string/choose_domain"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <EditText
+            android:id="@+id/fathers_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:background="@drawable/input_text_shap"
+            android:hint="@string/fathers_name"
+            android:autofillHints="@string/fathers_name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/fathers_contact"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            tools:ignore="RtlSymmetry" />
+
+
+        <EditText
+            android:id="@+id/fathers_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:layout_marginVertical="2dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/input_text_shap"
+            android:autofillHints="@string/fathers_contact"
+            android:hint="@string/fathers_contact"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/mothers_name"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/fathers_name"
+            tools:ignore="RtlSymmetry" />
+
+
+        <EditText
+            android:id="@+id/mothers_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:hint="@string/mothers_name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/guardain"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/fathers_contact"
+            tools:ignore="RtlSymmetry"
+           />
+
+
+        <EditText
+
+            android:id="@+id/guardain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:hint="@string/guardian"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/relation_text"
+            app:layout_constraintEnd_toEndOf="@id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/mothers_name"
+            tools:ignore="RtlSymmetry" />
+
+
+        <EditText
+
+            android:id="@+id/relation_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:hint="@string/relationship"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/dat_of_birth"
+            app:layout_constraintEnd_toEndOf="@id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/guardain"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/dat_of_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:hint="@string/dat_of_birth"
+            android:inputType="date"
+            app:layout_constraintBottom_toTopOf="@+id/experience"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/relation_text"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <EditText
+            android:id="@+id/experience"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:hint="@string/experience"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/address_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/dat_of_birth"
+            tools:ignore="RtlSymmetry,TextFields" />
+
+
+        <EditText
+            android:id="@+id/village"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:hint="@string/village"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/taluk_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/address_text"
+            tools:ignore="RtlSymmetry,TextFields" />
+
+        <EditText
+            android:id="@+id/taluk_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            android:hint="@string/taluk"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/village"
+            tools:ignore="RtlSymmetry,TextFields" />
+
+        <EditText
+            android:id="@+id/address_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@drawable/input_text_shap"
+            android:hint="@string/address"
+            android:inputType="text"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/village"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/experience"
+            tools:ignore="RtlSymmetry,TextFields" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            tools:layout_editor_absoluteY="611dp" />
+
+        <Button
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:drawableEnd="@drawable/manifest_icon"
+            android:text="@string/upload_id"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/taluk_text" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
