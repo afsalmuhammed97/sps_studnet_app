@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileCompletionFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/teal_700">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/Horiz_margin"
+        android:layout_marginHorizontal="@dimen/Horiz_margin"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/input_feild_shap"
+        android:backgroundTint="@color/white"
+        >
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="@dimen/Horiz_margin"
-        android:layout_marginVertical="20dp"
-        android:background="@drawable/input_feild_shap"
+
         android:backgroundTint="@color/white">
+
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/edit_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/left_guide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05"/>
+            app:layout_constraintGuide_percent="0.05" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/right_guide"
@@ -31,61 +57,45 @@
             app:layout_constraintGuide_percent="0.95" />
 
 
-
-        <EditText
-            android:id="@+id/mothers_name"
+        <Spinner
+            android:id="@+id/spinner1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="2dp"
-            android:background="@drawable/input_text_shap"
-            android:ems="10"
-            android:hint="@string/mothers_name"
-            android:inputType="textPersonName"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+
+            android:entries="@array/domains"
             android:paddingVertical="8dp"
-            android:paddingStart="5dp"
-            app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/guardain"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
-            app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/fathers_contact"
-            tools:ignore="RtlSymmetry"
-            android:autofillHints="" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/fathers_name"
             app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/textView13">
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/textInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/right_guide"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/left_guide"-->
+<!--            tools:layout_editor_absoluteY="24dp">-->
 
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="none"
-                android:singleLine="true"
-                android:text="@string/choose_domain"
-                tools:ignore="LabelFor" />
+<!--            <AutoCompleteTextView-->
+<!--                android:id="@+id/autoCompleteTextView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:inputType="none"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="@string/choose_domain"-->
+<!--                tools:ignore="LabelFor" />-->
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/edit_profile"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_18sp"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
-            app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <EditText
             android:id="@+id/fathers_name"
@@ -100,14 +110,40 @@
             android:paddingVertical="8dp"
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/fathers_contact"
+
+            app:layout_constraintBottom_toTopOf="@+id/mothers_contact"
             app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+
             app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/spinner1"
+            tools:ignore="RtlSymmetry" />
+
+
+        <EditText
+            android:id="@+id/mothers_name2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:autofillHints="@string/mothers_name"
+            android:background="@drawable/input_text_shap"
+            android:ems="10"
+            android:hint="@string/fathers_name"
+            android:inputType="textPersonName"
+            android:paddingVertical="8dp"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+
+            app:layout_constraintBottom_toTopOf="@+id/fathers_contact2"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/mothers_contact"
             tools:ignore="RtlSymmetry" />
 
         <EditText
-            android:id="@+id/fathers_contact"
+            android:id="@+id/mothers_contact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="2dp"
@@ -119,10 +155,31 @@
             android:paddingVertical="8dp"
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/mothers_name"
+            app:layout_constraintBottom_toTopOf="@+id/mothers_name2"
             app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
             app:layout_constraintTop_toBottomOf="@+id/fathers_name"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/fathers_contact2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:autofillHints="@string/mothers_name"
+            android:background="@drawable/input_text_shap"
+            android:ems="10"
+            android:hint="@string/mothers_name"
+            android:inputType="number"
+            android:paddingVertical="8dp"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            app:layout_constraintBottom_toTopOf="@+id/guardain"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/mothers_name2"
             tools:ignore="RtlSymmetry" />
 
         <EditText
@@ -140,10 +197,10 @@
             app:boxBackgroundMode="none"
             app:layout_constraintBottom_toTopOf="@+id/relation_text"
             app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/mothers_name"
+            app:layout_constraintTop_toBottomOf="@+id/fathers_contact2"
             tools:ignore="RtlSymmetry" />
-
 
         <EditText
 
@@ -151,6 +208,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="2dp"
+            android:layout_marginBottom="7dp"
             android:background="@drawable/input_text_shap"
             android:ems="10"
             android:hint="@string/relationship"
@@ -158,10 +216,30 @@
             android:paddingVertical="8dp"
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/dat_of_birth"
+            app:layout_constraintBottom_toTopOf="@+id/address_text"
             app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
             app:layout_constraintTop_toBottomOf="@+id/guardain"
+            tools:ignore="RtlSymmetry" />
+        <EditText
+
+            android:id="@+id/address_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:background="@drawable/input_text_shap"
+            android:ems="10"
+            android:hint="@string/address"
+            android:inputType="text"
+            android:paddingVertical="8dp"
+            android:paddingStart="5dp"
+            app:boxBackgroundMode="none"
+            app:layout_constraintBottom_toTopOf="@+id/dat_of_birth"
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
+            app:layout_constraintTop_toBottomOf="@+id/relation_text"
             tools:ignore="RtlSymmetry" />
 
         <EditText
@@ -176,14 +254,10 @@
             android:paddingVertical="8dp"
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/experience"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/village"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/relation_text"
+            app:layout_constraintTop_toBottomOf="@+id/address_text"
             tools:ignore="RtlSymmetry" />
-
-
 
         <EditText
             android:id="@+id/experience"
@@ -197,11 +271,9 @@
             android:paddingVertical="8dp"
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/address_text"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/taluk_tex"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/dat_of_birth"
+            app:layout_constraintTop_toBottomOf="@+id/taluk_text"
             tools:ignore="RtlSymmetry,TextFields" />
 
         <EditText
@@ -217,10 +289,9 @@
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
             app:layout_constraintBottom_toTopOf="@+id/taluk_text"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
-            app:layout_constraintHorizontal_bias="0.0"
+
             app:layout_constraintStart_toStartOf="@+id/left_guide"
-            app:layout_constraintTop_toBottomOf="@+id/address_text"
+            app:layout_constraintTop_toBottomOf="@+id/dat_of_birth"
             tools:ignore="RtlSymmetry,TextFields" />
 
         <EditText
@@ -235,9 +306,7 @@
             android:paddingVertical="8dp"
             android:paddingStart="5dp"
             app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/taluk_tex"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/experience"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
             app:layout_constraintTop_toBottomOf="@+id/village"
             tools:ignore="RtlSymmetry,TextFields" />
@@ -254,42 +323,25 @@
             android:text="@string/qulificatiion"
             app:boxBackgroundMode="none"
             app:layout_constraintBottom_toTopOf="@+id/imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/taluk_text"
-            tools:ignore="RtlSymmetry,TextFields"
-            tools:layout_editor_absoluteX="69dp" />
-
-        <EditText
-            android:id="@+id/address_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="2dp"
-            android:autofillHints=""
-            android:background="@drawable/input_text_shap"
-            android:ems="10"
-            android:hint="@string/address"
-            android:inputType="text"
-            android:paddingVertical="8dp"
-            android:paddingStart="5dp"
-            app:boxBackgroundMode="none"
-            app:layout_constraintBottom_toTopOf="@+id/village"
-            app:layout_constraintEnd_toStartOf="@+id/right_guide"
             app:layout_constraintStart_toStartOf="@+id/left_guide"
             app:layout_constraintTop_toBottomOf="@+id/experience"
             tools:ignore="RtlSymmetry,TextFields" />
 
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
 
-            android:layout_marginBottom="19dp"
             android:entries="@array/qualifications"
             app:layout_constraintBottom_toTopOf="@+id/imageButton"
-            tools:layout_editor_absoluteX="207dp" />
+            app:layout_constraintEnd_toStartOf="@+id/right_guide"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/taluk_tex" />
 
         <Button
             android:id="@+id/imageButton"
-            android:layout_width="316dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/transparent"
             android:drawableEnd="@drawable/manifest_icon"
@@ -297,12 +349,17 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/right_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_guide"
             app:layout_constraintTop_toBottomOf="@+id/taluk_tex"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="28dp" />
-
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 
 </LinearLayout>
