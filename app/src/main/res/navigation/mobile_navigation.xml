@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/homeFragment">
+    app:startDestination="@+id/splashScreenFragment">
 
 
     <fragment
@@ -61,12 +61,61 @@
         android:id="@+id/homeFragment"
         android:name="com.practies.myapplication.ui.home.HomeFragment"
         android:label=""
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/home_fragment"
+     />
     <fragment
         android:id="@+id/profileCompletionFragment"
         android:name="com.practies.myapplication.ui.profile.ProfileCompletionFragment"
         android:label="fragment_profile_completion"
         tools:layout="@layout/fragment_profile_completion" />
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.practies.myapplication.splashUi.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+
+
+        <action
+            android:id="@+id/action_splashScreenFragment_to_logInFragment2"
+            app:destination="@id/logInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/walkeThroughFragment1"
+        android:name="com.practies.myapplication.splashUi.ViewPageFragment"
+        android:label="fragment_walke_through1"
+        tools:layout="@layout/fragment_walke_through1" >
+
+
+        <action
+            android:id="@+id/action_walkeThroughFragment1_to_homeFragment2"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.practies.myapplication.LogIn.LogInFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.practies.myapplication.LogIn.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_walkeThroughFragment1"
+            app:destination="@id/walkeThroughFragment1"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
 
 
 </navigation>

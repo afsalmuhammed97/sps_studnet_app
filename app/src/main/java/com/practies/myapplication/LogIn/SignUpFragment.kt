@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.practies.myapplication.R
 import com.practies.myapplication.databinding.FragmentSignUpBinding
@@ -43,6 +44,16 @@ private  var _binding: FragmentSignUpBinding?=null
         super.onDestroyView()
         _binding = null
     }
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity).supportActionBar?.show()
+    }
+
 
 
 

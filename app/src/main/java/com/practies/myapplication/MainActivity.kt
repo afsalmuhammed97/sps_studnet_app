@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
 
             ),drawerLayout
         )
+     binding.navView.inflateMenu(R.menu.activity_main_drawer
+     )
 
       setupActionBarWithNavController(navController , appBarConfiguration)
 

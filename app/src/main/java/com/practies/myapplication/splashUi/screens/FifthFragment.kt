@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.practies.myapplication.MainActivity
 import com.practies.myapplication.R
@@ -27,10 +29,15 @@ class FifthFragment : Fragment() {
 
         nextButton.setOnClickListener{
             onBoardingFinished()
-           val intent= Intent(context,MainActivity::class.java)
-            startActivity(intent)
-            requireActivity().finish()
+          // val intent= Intent(context,MainActivity::class.java)
+           // startActivity(intent)
+            //requireActivity().finish()
            // Toast.makeText(context,"clicked",Toast.LENGTH_SHORT).show()
+
+            findNavController().navigate(R.id.action_walkeThroughFragment1_to_homeFragment2)
+
+
+
         }
         return view
     }
@@ -40,6 +47,16 @@ class FifthFragment : Fragment() {
         val editor=sharedPref.edit()
         editor.putBoolean("Finished",true)
         editor.apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
 

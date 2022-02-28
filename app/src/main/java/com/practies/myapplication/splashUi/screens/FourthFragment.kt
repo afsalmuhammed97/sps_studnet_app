@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.practies.myapplication.R
 
@@ -27,6 +28,16 @@ class FourthFragment : Fragment() {
         }
 
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
 

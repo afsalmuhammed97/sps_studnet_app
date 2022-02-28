@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.practies.myapplication.MainActivity
 import com.practies.myapplication.R
@@ -34,13 +35,23 @@ class SplashScreenFragment : Fragment() {
 //          }else{
 //              findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment)
 //          }
-          findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment)
+          findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment2)
 
 
       },1000)
 
 
         return inflater.inflate(R.layout.fragment_splash_screen, container, false)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
 
