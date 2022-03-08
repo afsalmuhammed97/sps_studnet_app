@@ -8,21 +8,23 @@
     android:layout_height="wrap_content"
     android:backgroundTint="@color/teal"
     app:contentPadding="10dp"
-    android:layout_marginVertical="20dp"
-    android:layout_marginHorizontal="20dp"
-    app:cardCornerRadius="@dimen/card_corner"
-    app:cardElevation="5dp"
+    android:layout_margin="@dimen/margin10dp"
+
+    app:cardCornerRadius="@dimen/cornerStantared"
+    app:cardElevation="8dp"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:layout_marginVertical="10dp"
         tools:ignore="UseCompoundDrawables">
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/lcon_locked"
+            android:layout_gravity="right"
             android:contentDescription="@string/img" />
         <TextView
             android:id="@+id/week_text"

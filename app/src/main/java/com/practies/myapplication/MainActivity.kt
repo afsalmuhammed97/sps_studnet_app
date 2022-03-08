@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -16,48 +17,76 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import com.practies.myapplication.databinding.ActivityMainBinding
-
+import dagger.hilt.android.AndroidEntryPoint
+import kotlin.properties.Delegates
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
  //   private lateinit var listener: NavController.OnDestinationChangedListener
+    companion object{
+     var isTeacher :Boolean=false
+ }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+       isTeacher=intent.getBooleanExtra("teacher",false)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+     Toast.makeText( applicationContext,if (isTeacher) "Teacher" else "student", Toast.LENGTH_SHORT).show()
        setSupportActionBar(binding.appBarMain.toolbar)
            // ActionBar.DISPLAY_HOME_AS_UP
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+     val studentScreens=setOf(
+         R.id.profileFragment2,
+         R.id.tasksFragment,
+         R.id.manifestFragment,
+         R.id.notificationsFragment,
+         R.id.homeFragment)
 
-
-
+     val counsilorScreens= setOf(
+         R.id.cousilorHomeFragment,
+         R.id.domainFragment,
+         R.id.reviewerListFragment,
+         R.id.schedulesFragment)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+
+
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
-        appBarConfiguration = AppBarConfiguration(    // navController.graph,drawerLayout)
-            setOf(
-            R.id.profileFragment2,
-            R.id.tasksFragment,
-            R.id.manifestFragment,
-            R.id.notificationsFragment,
-                R.id.homeFragment
+       appBarConfiguration = AppBarConfiguration( if(isTeacher) counsilorScreens else studentScreens
+           ,drawerLayout)
 
-            ),drawerLayout
-        )
-     binding.navView.inflateMenu(R.menu.activity_main_drawer
-     )
+         navController.setGraph( if (isTeacher) R.navigation.counsilor_nav else  R.navigation.mobile_navigation  )
+     binding.navView.inflateMenu(if (isTeacher) R.menu.counsilor_drawer else R.menu.activity_main_drawer)      //
 
       setupActionBarWithNavController(navController , appBarConfiguration)
 
         navView.setupWithNavController(navController)
+
         drawerAnimation()
+    }
+
+    private fun selectNavigation(student:Boolean,drawerLayout:DrawerLayout){
+
+        val studentScreens=setOf(
+            R.id.profileFragment2,
+            R.id.tasksFragment,
+            R.id.manifestFragment,
+            R.id.notificationsFragment,
+            R.id.homeFragment)
+
+    // val counsilorScreens= setOf(R.id.domainFragment,R.id.reviewerListFragment,R.id.schedulesFragment)
+
+      //  appBarConfiguration = AppBarConfiguration(   counsilorScreens ,drawerLayout)
+
+       // binding.navView.inflateMenu(R.menu.counsilor_drawer)      //R.menu.activity_main_drawer) //diffine with if cace
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

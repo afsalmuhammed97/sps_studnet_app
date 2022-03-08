@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.practies.myapplication.R
-import com.practies.myapplication.databinding.FragmentHome1Binding
+
 import com.practies.myapplication.databinding.HomeFragmentBinding
 
 class HomeFragment : Fragment() {

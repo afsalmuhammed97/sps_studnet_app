@@ -5,40 +5,41 @@
     android:id="@+id/on_boarding_nav"
     app:startDestination="@id/splashScreenFragment">
 
-<!--    <fragment-->
-<!--        android:id="@+id/splashScreenFragment"-->
-<!--        android:name="com.practies.myapplication.splashUi.SplashScreenFragment"-->
-<!--        android:label="fragment_splash_screen"-->
-<!--        tools:layout="@layout/fragment_splash_screen" >-->
-<!--        <action-->
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.practies.myapplication.splashUi.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
 
-<!--            app:destination="@id/logInFragment" />-->
-<!--    </fragment>-->
+        <action
+            android:id="@+id/action_splashScreenFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
 
-<!--    <fragment-->
-<!--        android:id="@+id/walkeThroughFragment1"-->
-<!--        android:name="com.practies.myapplication.splashUi.ViewPageFragment"-->
-<!--        android:label="fragment_walke_through1"-->
-<!--        tools:layout="@layout/fragment_walke_through1" >-->
+    <fragment
+        android:id="@+id/walkeThroughFragment1"
+        android:name="com.practies.myapplication.splashUi.ViewPageFragment"
+        android:label="fragment_walke_through1"
+        tools:layout="@layout/fragment_walke_through1" >
 
-<!--    </fragment>-->
-<!--    <fragment-->
-<!--        android:id="@+id/logInFragment"-->
-<!--        android:name="com.practies.myapplication.LogIn.LogInFragment"-->
-<!--        android:label="fragment_login"-->
-<!--        tools:layout="@layout/fragment_login" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_logInFragment_to_signUpFragment"-->
-<!--            app:destination="@id/signUpFragment" />-->
-<!--    </fragment>-->
-<!--    <fragment-->
-<!--        android:id="@+id/signUpFragment"-->
-<!--        android:name="com.practies.myapplication.LogIn.SignUpFragment"-->
-<!--        android:label="fragment_sign_up"-->
-<!--        tools:layout="@layout/fragment_sign_up" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_signUpFragment_to_walkeThroughFragment1"-->
-<!--            app:destination="@id/walkeThroughFragment1" />-->
-<!--    </fragment>-->
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.practies.myapplication.LogIn.LogInFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.practies.myapplication.LogIn.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_walkeThroughFragment1"
+            app:destination="@id/walkeThroughFragment1" />
+    </fragment>
 
 </navigation>

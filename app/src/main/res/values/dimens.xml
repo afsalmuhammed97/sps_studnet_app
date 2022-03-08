@@ -17,7 +17,11 @@
     <dimen name="text_18sp">18sp</dimen>
     <dimen name="text_16sp">16dp</dimen>
     <dimen name="Horiz_margin">20dp</dimen>
-    <dimen name="card_corner">20dp</dimen>
+    <dimen name="Vert_margin">15dp</dimen>
+     <dimen name="margin10dp">10dp</dimen>
+    <dimen name="margin5dp">5dp</dimen>
+    <dimen name="card_corner">14dp</dimen>
+     <dimen name="cornerStantared">10dp</dimen>
     <dimen name="card_corner_small">10dp</dimen>
     <dimen name="card_margin">20dp</dimen>
     <dimen name="between_margin">12dp</dimen>
@@ -26,5 +30,6 @@
     <dimen name="small_text14">14sp</dimen>
     <dimen name="table_width">250dp</dimen>
     <dimen name="text_14sp">14sp</dimen>
+    <dimen name="margin20dp">20dp</dimen>
 
 </resources>

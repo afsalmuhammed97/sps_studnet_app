@@ -29,7 +29,7 @@ class ViewPageFragment : Fragment() {
             FourthFragment(),
             FifthFragment()
         )
-            val adapterP=viewPagerAdapter(fragmentList,requireActivity().supportFragmentManager,lifecycle)
+            val adapterP=ViewPagerAdapter(fragmentList,requireActivity().supportFragmentManager,lifecycle)
               viewpager.adapter=adapterP
         return  view
     }

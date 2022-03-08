@@ -29,12 +29,12 @@ class FifthFragment : Fragment() {
 
         nextButton.setOnClickListener{
             onBoardingFinished()
-          // val intent= Intent(context,MainActivity::class.java)
-           // startActivity(intent)
-            //requireActivity().finish()
+           val intent= Intent(context,MainActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
            // Toast.makeText(context,"clicked",Toast.LENGTH_SHORT).show()
 
-            findNavController().navigate(R.id.action_walkeThroughFragment1_to_homeFragment2)
+//            findNavController().navigate(R.id.action_walkeThroughFragment1_to_homeFragment2)
 
 
 

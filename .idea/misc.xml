@@ -7,19 +7,22 @@
         <entry key="..\:/sps/app/src/main/res/drawable-v24/back_ground_shap.xml" value="0.12314814814814815" />
         <entry key="..\:/sps/app/src/main/res/drawable-v24/unSelected.xml" value="0.2128205128205128" />
         <entry key="..\:/sps/app/src/main/res/drawable-v24/un_selected.xml" value="0.2128205128205128" />
+        <entry key="..\:/sps/app/src/main/res/drawable/add_icon.xml" value="0.21197916666666666" />
         <entry key="..\:/sps/app/src/main/res/drawable/back_ground_shap.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/background_shap.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/drawable/bg_shap.xml" value="0.19" />
         <entry key="..\:/sps/app/src/main/res/drawable/bottom_sheet_shap.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/button_sha.xml" value="0.18333333333333332" />
         <entry key="..\:/sps/app/src/main/res/drawable/button_shap.xml" value="0.18333333333333332" />
+        <entry key="..\:/sps/app/src/main/res/drawable/card_top_corners.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/edit_icon.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/forward_arrow.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/half_shap.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/home_icon.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/horizontal_bar.xml" value="0.20555555555555555" />
         <entry key="..\:/sps/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.18796296296296297" />
-        <entry key="..\:/sps/app/src/main/res/drawable/imag_shap.xml" value="0.19" />
+        <entry key="..\:/sps/app/src/main/res/drawable/imag_shap.xml" value="0.15" />
+        <entry key="..\:/sps/app/src/main/res/drawable/image_background.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/indicator_selector.xml" value="0.2128205128205128" />
         <entry key="..\:/sps/app/src/main/res/drawable/input_feild_shap.xml" value="0.18333333333333332" />
         <entry key="..\:/sps/app/src/main/res/drawable/input_text_shap.xml" value="0.21197916666666666" />
@@ -29,13 +32,19 @@
         <entry key="..\:/sps/app/src/main/res/drawable/profile_icon.xml" value="0.1675925925925926" />
         <entry key="..\:/sps/app/src/main/res/drawable/selected.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/drawable/side_nav_bar.xml" value="0.21614583333333334" />
+        <entry key="..\:/sps/app/src/main/res/drawable/spinner_shap.xml" value="0.13518518518518519" />
         <entry key="..\:/sps/app/src/main/res/drawable/toolbar_bg.xml" value="0.1" />
         <entry key="..\:/sps/app/src/main/res/drawable/wave_bg.xml" value="0.21614583333333334" />
         <entry key="..\:/sps/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/sps/app/src/main/res/layout/activity_walk_through.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="..\:/sps/app/src/main/res/layout/content_main.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/costom_dilog.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/domain_view_item.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/layout/drop_down_item.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_counsilo_home.xml" value="0.19166666666666668" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_cousilor_home.xml" value="0.25" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_domain.xml" value="0.19166666666666668" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_fifth.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_fourth.xml" value="0.2" />
@@ -44,23 +53,28 @@
         <entry key="..\:/sps/app/src/main/res/layout/fragment_home1.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_log_in.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_login.xml" value="0.22" />
-        <entry key="..\:/sps/app/src/main/res/layout/fragment_manifest.xml" value="0.15" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_manifest.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_menu.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_notifications.xml" value="0.2" />
-        <entry key="..\:/sps/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_profile_completion.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_profile_form.xml" value="0.25" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_reviewer_list.xml" value="0.25" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_reviewer_page.xml" value="0.1" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_schedules.xml" value="0.19166666666666668" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_second.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_sign_up.xml" value="0.19791666666666666" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_slideshow.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_splash_screen.xml" value="0.1" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_student_view.xml" value="0.25" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_stuendent_list.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_task_boto_sheet_list_dialog.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_task_boto_sheet_list_dialog_item.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_task_botom_seet.xml" value="0.25" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_task_botom_sheet_dialog_list_dialog.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_task_botom_sheet_dialog_list_dialog_item.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_task_view.xml" value="0.22" />
-        <entry key="..\:/sps/app/src/main/res/layout/fragment_tasks.xml" value="0.15" />
+        <entry key="..\:/sps/app/src/main/res/layout/fragment_tasks.xml" value="0.22" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_thired.xml" value="0.18" />
         <entry key="..\:/sps/app/src/main/res/layout/fragment_walke_through1.xml" value="0.19583333333333333" />
         <entry key="..\:/sps/app/src/main/res/layout/home_fragment.xml" value="0.2" />
@@ -69,7 +83,11 @@
         <entry key="..\:/sps/app/src/main/res/layout/manifest_item.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/nav_header_main.xml" value="0.33" />
         <entry key="..\:/sps/app/src/main/res/layout/notification_item.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/reivier_page_fragment.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/reviewer_view.xml" value="0.14722222222222223" />
         <entry key="..\:/sps/app/src/main/res/layout/sign_up_screen.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/student_view.xml" value="0.2" />
+        <entry key="..\:/sps/app/src/main/res/layout/studnet_view.xml" value="0.18" />
         <entry key="..\:/sps/app/src/main/res/layout/task_item.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/task_item1.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/layout/tool_bar_layout.xml" value="0.2" />
@@ -80,6 +98,7 @@
         <entry key="..\:/sps/app/src/main/res/menu-v26/activity_main_drawer.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/menu-v26/main.xml" value="0.2" />
         <entry key="..\:/sps/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
+        <entry key="..\:/sps/app/src/main/res/menu/counsilor_drawer.xml" value="0.33" />
         <entry key="..\:/sps/app/src/main/res/menu/main.xml" value="0.2" />
       </map>
     </option>

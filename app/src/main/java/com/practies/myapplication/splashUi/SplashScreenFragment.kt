@@ -27,7 +27,7 @@ class SplashScreenFragment : Fragment() {
     ): View? {
 
       Handler().postDelayed({
-          //if boarding is finished
+         // if boarding is finished
 //          if (onBoardingCheck()){
 //              val intent=Intent(context,MainActivity::class.java)
 //              startActivity(intent)
@@ -35,9 +35,9 @@ class SplashScreenFragment : Fragment() {
 //          }else{
 //              findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment)
 //          }
-          findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment2)
 
 
+        findNavController().navigate(R.id.action_splashScreenFragment_to_logInFragment)
       },1000)
 
 

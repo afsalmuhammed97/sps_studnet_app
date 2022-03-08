@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.practies.myapplication.databinding.TaskItemBinding
-
+import com.practies.myapplication.interfaces.OnItemClickListeners
 class TaskAdapter(val taskList:ArrayList<String>,
-               private   val listener: OnItemClickListener
+               private   val listener:OnItemClickListeners                //OnItemClickListener
 ):RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
 
 
@@ -44,8 +44,8 @@ class TaskAdapter(val taskList:ArrayList<String>,
 
     override fun getItemCount()=taskList.size
 
-    interface OnItemClickListener{
-        fun onItemClick( position: Int)
-    }
+//    interface OnItemClickListener{
+//        fun onItemClick( position: Int)
+//    }
 
 }

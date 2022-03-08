@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/cousilorHomeFragment"
+            android:title="@string/home"
+            android:icon="@drawable/home_icon"
+
+            />
+        <item
+            android:id="@+id/domainFragment"
+            android:icon="@drawable/domains"
+            android:title="@string/domain"
+
+            />
+
+        <item
+            android:id="@+id/reviewerListFragment"
+            android:icon="@drawable/profile_icon"
+            android:title="@string/reviewer" />
+
+        <item
+            android:id="@+id/schedulesFragment"
+            android:icon="@drawable/schedulse"
+            android:title="@string/schedules" />
+
+
+        <item
+
+            android:icon="@drawable/logout"
+            android:title="@string/menu_logout"
+            />
+
+
+    </group>
+</menu>

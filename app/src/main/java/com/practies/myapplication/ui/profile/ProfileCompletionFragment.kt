@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.practies.myapplication.R
-import com.practies.myapplication.databinding.FragmentProfileCompletionBinding
+
 import com.practies.myapplication.databinding.FragmentProfileFormBinding
 
 class ProfileCompletionFragment : Fragment() {

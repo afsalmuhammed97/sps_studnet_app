@@ -8,18 +8,19 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.practies.myapplication.MainActivity
+import com.practies.myapplication.MainActivity.Companion.isTeacher
 import com.practies.myapplication.R
+import com.practies.myapplication.WalkThrough
 import com.practies.myapplication.ui.adapters.TaskAdapter
 import com.practies.myapplication.databinding.FragmentTasksBinding
+import com.practies.myapplication.interfaces.OnItemClickListeners
 
-class TasksFragment : Fragment(), TaskAdapter.OnItemClickListener {
+class TasksFragment : Fragment(),OnItemClickListeners {// TaskAdapter.OnItemClickListener
     lateinit var binding: FragmentTasksBinding
     lateinit var taskAdapter: TaskAdapter
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    val teacher=isTeacher
 
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +29,8 @@ class TasksFragment : Fragment(), TaskAdapter.OnItemClickListener {
 
         binding= FragmentTasksBinding.inflate(inflater,container,false)
            setView()
+
+
 
         return  binding.root
     }
@@ -56,9 +59,15 @@ class TasksFragment : Fragment(), TaskAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-      // Toast.makeText(context,"${position} clicked",Toast.LENGTH_SHORT).show()
 
-        findNavController().navigate(R.id.action_tasksFragment_to_taskBotomSeetFragment)
+
+        if (teacher){
+            findNavController().navigate(R.id.action_studentViewFragment_to_taskBotomSeetFragment2)
+        }else{
+            findNavController().navigate(R.id.action_tasksFragment_to_taskBotomSeetFragment)
+        }
+
+
     }
 
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/counsilor_nav"
+    app:startDestination="@id/cousilorHomeFragment">
+
+    <fragment
+        android:id="@+id/cousilorHomeFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.counselorHomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_cousilor_home" >
+        <action
+            android:id="@+id/action_cousilorHomeFragment_to_domainFragment"
+            app:destination="@id/domainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/domainFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.DomainFragment"
+        android:label=""
+        tools:layout="@layout/fragment_domain" >
+
+        <action
+            android:id="@+id/action_domainFragment_to_stuendentListFragment"
+            app:destination="@id/stuendentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stuendentListFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.StudentListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_stuendent_list" >
+        <action
+            android:id="@+id/action_stuendentListFragment_to_studentViewFragment"
+            app:destination="@id/studentViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentViewFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.StudentViewFragment"
+        android:label=""
+        tools:layout="@layout/fragment_student_view" >
+
+        <action
+            android:id="@+id/action_studentViewFragment_to_taskBotomSeetFragment2"
+            app:destination="@id/taskBotomSeetFragment2" />
+        <action
+            android:id="@+id/action_studentViewFragment_to_taskViewFragment2"
+            app:destination="@id/taskViewFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewerListFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.ReviewerListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_reviewer_list" >
+        <action
+            android:id="@+id/action_reviewerListFragment_to_reviewerPageFragment"
+            app:destination="@id/reviewerPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schedulesFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.SchedulesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_schedules" />
+    <dialog
+        android:id="@+id/taskBotomSeetFragment2"
+        android:name="com.practies.myapplication.ui.bottomSheet.TaskBotomSeetFragment"
+        android:label="fragment_task_botom_seet"
+        tools:layout="@layout/fragment_task_botom_seet" >
+<!--        <action-->
+<!--            android:id="@+id/action_taskBotomSeetFragment2_to_taskViewFragment2"-->
+<!--            app:destination="@id/taskViewFragment2" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_taskBotomSeetFragment2_to_taskViewFragment22"-->
+<!--            app:destination="@id/taskViewFragment2" />-->
+        <action
+            android:id="@+id/action_taskBotomSeetFragment2_to_taskViewFragment23"
+            app:destination="@id/taskViewFragment2" />
+    </dialog>
+    <fragment
+        android:id="@+id/taskViewFragment2"
+        android:name="com.practies.myapplication.taskView.TaskViewFragment"
+        android:label=""
+        tools:layout="@layout/fragment_task_view" >
+        <action
+            android:id="@+id/action_taskViewFragment2_to_studentViewFragment"
+            app:destination="@id/studentViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment2"
+        android:name="com.practies.myapplication.ui.tasks.TasksFragment"
+        android:label=""
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment2_to_taskBotomSeetFragment2"
+            app:destination="@id/taskBotomSeetFragment2" />
+        <action
+            android:id="@+id/action_tasksFragment2_to_taskBotomSeetFragment22"
+            app:destination="@id/taskBotomSeetFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewerPageFragment"
+        android:name="com.practies.myapplication.counsilor.counselorUi.ReviewerPageFragment"
+        android:label=""
+        tools:layout="@layout/fragment_reviewer_page" />
+</navigation>

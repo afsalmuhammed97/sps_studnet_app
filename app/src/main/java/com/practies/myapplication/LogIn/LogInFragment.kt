@@ -35,10 +35,23 @@ class LogInFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.logInBt.setOnClickListener{
           //  findNavController().navigate(R.id.action_fifthFragment_to_homeFragment)
+            val intent= Intent(context,MainActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+
+
         }
 
         binding.signUpBt.setOnClickListener{
                  findNavController().navigate(R.id.action_logInFragment_to_signUpFragment)
+        }
+        binding.teacherSignIn.setOnClickListener{
+             val isTeacher:Boolean=true
+            val intent= Intent(context,MainActivity::class.java)
+            intent.putExtra("teacher",isTeacher)
+            startActivity(intent)
+            requireActivity().finish()
+
         }
 
     }
