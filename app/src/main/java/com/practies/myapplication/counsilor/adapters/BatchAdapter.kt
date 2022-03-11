@@ -10,22 +10,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.practies.myapplication.databinding.DomainViewItemBinding
 import com.practies.myapplication.interfaces.OnItemClickListeners
 import com.practies.myapplication.model.Batch
-import com.practies.myapplication.model.Domain
 
 //val domains:List<String>,
-class DomainAdapter  (
+class BatchAdapter  (
                      private val listener:OnItemClickListeners
-):RecyclerView.Adapter<DomainAdapter.ItemHolder>() {
+):RecyclerView.Adapter<BatchAdapter.ItemHolder>() {
 
 
 
 
-    private val diffCallBack=object :DiffUtil.ItemCallback<Domain>(){
-        override fun areItemsTheSame(oldItem: Domain, newItem: Domain): Boolean {
+    private val diffCallBack=object :DiffUtil.ItemCallback<Batch>(){
+        override fun areItemsTheSame(oldItem: Batch, newItem: Batch): Boolean {
             return  oldItem==newItem
         }
 
-        override fun areContentsTheSame(oldItem: Domain, newItem: Domain): Boolean {
+        override fun areContentsTheSame(oldItem: Batch, newItem: Batch): Boolean {
 
             return  oldItem._id==newItem._id
         }
@@ -57,7 +56,7 @@ class DomainAdapter  (
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-       holder.binding.itemText.text=differ.currentList[position].DomainName
+       holder.binding.itemText.text=differ.currentList[position].BatchName
     }
 
     override fun getItemCount()= differ.currentList.size

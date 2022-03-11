@@ -3,6 +3,7 @@ package com.practies.myapplication.di
 import com.practies.myapplication.network.helper.Constants.BASE_URL
 import com.practies.myapplication.network.repositories.TeacherRepository
 import com.practies.myapplication.network.services.ApiServices
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,19 +15,22 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    @Provides
+
     @Singleton
-    fun providesRetrofit():Retrofit=
+    @Provides
+    fun providesRetrofit(): Retrofit =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-@Provides
-@Singleton
-fun providesAPI(retrofit: Retrofit):ApiServices=
-        retrofit.create(ApiServices::class.java)
-}
 
-@Singleton
-@Provides
-fun providesRepository(apiServices: ApiServices)=TeacherRepository(apiServices)
+    @Singleton
+    @Provides
+    fun providesAPI(retrofit: Retrofit): ApiServices =
+        retrofit.create(ApiServices::class.java)
+
+    @Singleton
+    @Provides
+    fun providesRepository(apiServices: ApiServices) = TeacherRepository(apiServices)
+
+}
