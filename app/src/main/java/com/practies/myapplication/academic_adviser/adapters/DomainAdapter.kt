@@ -1,15 +1,13 @@
-package com.practies.myapplication.counsilor.adapters
+package com.practies.myapplication.academic_adviser.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.practies.myapplication.databinding.DomainViewItemBinding
 import com.practies.myapplication.interfaces.OnItemClickListeners
-import com.practies.myapplication.model.Batch
 import com.practies.myapplication.model.Domain
 
 //val domains:List<String>,

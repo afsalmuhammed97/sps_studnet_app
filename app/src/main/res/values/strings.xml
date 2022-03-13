@@ -189,6 +189,11 @@
     <string name="batch">Batch</string>
     <string name="schedule">schedule</string>
     <string name="loginAs">Sign as counselor</string>
+    <string name="all_students">All Students</string>
+    <string name="add_student">Add student</string>
+    <string name="student_name">Student name</string>
+    <string name="cancel">Cancel</string>
+    <string name="ko">Ok</string>
     <string-array name="domains">
         <item>Choose your domain</item>
         <item>Web Development with Node(MERN)</item>

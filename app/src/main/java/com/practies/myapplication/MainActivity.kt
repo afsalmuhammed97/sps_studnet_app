@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.ActionBar
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,10 +13,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
 import com.practies.myapplication.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlin.properties.Delegates
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
@@ -62,8 +59,8 @@ class MainActivity : AppCompatActivity() {
        appBarConfiguration = AppBarConfiguration( if(isTeacher) counsilorScreens else studentScreens
            ,drawerLayout)
 
-         navController.setGraph( if (isTeacher) R.navigation.counsilor_nav else  R.navigation.mobile_navigation  )
-     binding.navView.inflateMenu(if (isTeacher) R.menu.counsilor_drawer else R.menu.activity_main_drawer)      //
+         navController.setGraph( if (isTeacher) R.navigation.adviser_nav else  R.navigation.mobile_navigation  )
+     binding.navView.inflateMenu(if (isTeacher) R.menu.adviser_drawer else R.menu.activity_main_drawer)      //
 
       setupActionBarWithNavController(navController , appBarConfiguration)
 

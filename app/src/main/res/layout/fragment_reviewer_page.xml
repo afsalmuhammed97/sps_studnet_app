@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".counsilor.counselorUi.ReviewerPageFragment"
+    tools:context=".academic_adviser.adviser_ui.ReviewerPageFragment"
     android:background="@color/teal_700">
 
     <androidx.constraintlayout.widget.ConstraintLayout

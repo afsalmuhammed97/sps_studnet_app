@@ -1,4 +1,4 @@
-package com.practies.myapplication.counsilor.counselorUi
+package com.practies.myapplication.academic_adviser.adviser_ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

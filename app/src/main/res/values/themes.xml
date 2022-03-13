@@ -38,7 +38,12 @@
 <!--         -->
 <!--    </style>-->
 
+      <style name="alert_dialog_theme"
+          parent="Theme.AppCompat.Light.Dialog.Alert">
+          <item name="android:background">@color/teal_700</item>
 
+
+      </style>
 
 
 

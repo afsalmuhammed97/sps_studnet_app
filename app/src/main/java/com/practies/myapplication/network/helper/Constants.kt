@@ -1,7 +1,7 @@
 package com.practies.myapplication.network.helper
 
 object Constants {
-    const val BASE_URL:String="https://sps-backend-api.herokuapp.com"
+        const val BASE_URL:String="https://sps-backend-api.herokuapp.com"
 
 
     //student management
@@ -21,4 +21,25 @@ object Constants {
     const val DELETE_REVIEWER="/teacher/deleteReviewer/:id"
 }
 
-// including identifying memory leaks, performance bottlenecks, and using tools like adb, proguard, etc
+// including identifying memory leaks, performance bottlenecks, and using tools like adb, proguard,
+
+//Name,
+//Domain,
+//DOB,
+//Age,
+//Gender,
+//Email,
+//Mobile,
+//FatherName,
+//FatherNo,
+//MotherName,
+//MotherNo,
+//Guardian,
+//Relationship,
+//Address,
+//Village,
+//Taluk,
+//Qualification,
+//School,
+//Experience,
+//PaymentMethod,

@@ -1,11 +1,9 @@
 package com.practies.myapplication.network.services
 
-import com.practies.myapplication.SignUpData
-import com.practies.myapplication.SignUpResponse
-import com.practies.myapplication.model.BatchData
-import com.practies.myapplication.model.Domain
-import com.practies.myapplication.model.Domains
+import com.practies.myapplication.model.*
+import com.practies.myapplication.network.helper.Constants.ADD_DOMAIN
 import com.practies.myapplication.network.helper.Constants.ADD_STUDENT
+import com.practies.myapplication.network.helper.Constants.DELETE_DOMAIN
 import com.practies.myapplication.network.helper.Constants.GET_ALL_BATCH
 import com.practies.myapplication.network.helper.Constants.GET_ALL_DOMAINS
 import com.practies.myapplication.network.helper.Constants.GET_STUDENTS
@@ -17,21 +15,33 @@ import retrofit2.http.POST
 interface ApiServices {
 
     @POST("/signup")
-   suspend fun studentSignUp(@Body signUpData: SignUpData):Response<SignUpResponse>
+   suspend fun studentSignUp(@Body signUpData: SignUpData):Response<ResponseMessage>
 
       //domain management
-   @GET(GET_ALL_DOMAINS)
-   suspend fun getAllDomains():Response<Domains >
+     @GET(GET_ALL_DOMAINS)
+     suspend fun getAllDomains():Response<Domains >
+
+    @POST(ADD_DOMAIN)
+    suspend fun addNewDomain()
+
+    @POST(DELETE_DOMAIN)
+    suspend fun deleteDomain(@Body DomainName:String):Response<ResponseMessage >
 
 
-   //teacher management
+    //student management
    @GET(GET_ALL_BATCH)
    suspend fun getAllBatches():Response<BatchData>
 
    @GET(GET_STUDENTS)
-   suspend fun getAllStudents()
+   suspend fun getAllStudents():Response<StudentData>
 
     @POST(ADD_STUDENT)
-    suspend fun addStudent()
+    suspend fun addStudent( @Body newStudent: NewStudent):ResponseMessage
+
+
+    //student management
+
+
+
 
 }

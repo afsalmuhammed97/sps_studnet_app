@@ -1,17 +1,16 @@
-package com.practies.myapplication.counsilor.counselorUi
+package com.practies.myapplication.academic_adviser.adviser_ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.practies.myapplication.R
-import com.practies.myapplication.counsilor.adapters.DomainAdapter
-import com.practies.myapplication.counsilor.counselorUi.home.TeacherViewModel
+import com.practies.myapplication.academic_adviser.adapters.DomainAdapter
+import com.practies.myapplication.viewModels.AdviserViewModel
 import com.practies.myapplication.databinding.FragmentDomainBinding
 import com.practies.myapplication.interfaces.OnItemClickListeners
 
@@ -21,8 +20,8 @@ class DomainFragment : Fragment(),OnItemClickListeners {
     private  var _binding: FragmentDomainBinding ?=null
     private val binding get() = _binding!!
     private lateinit var domainAdapter:DomainAdapter
-  //  private val viewModel by viewModels<TeacherViewModel> ()
-    private val viewModel:TeacherViewModel by activityViewModels()
+  //  private val viewModel by viewModels<AdviserViewModel> ()
+    private val viewModel: AdviserViewModel by activityViewModels()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
 //private val sharedViewModel: OrderViewModel by activityViewModels()
@@ -35,7 +34,7 @@ class DomainFragment : Fragment(),OnItemClickListeners {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-       // val viewModel = ViewModelProvider(requireActivity()).get(TeacherViewModel::class.java)
+       // val viewModel = ViewModelProvider(requireActivity()).get(AdviserViewModel::class.java)
     }
 
     private fun setUpView(){

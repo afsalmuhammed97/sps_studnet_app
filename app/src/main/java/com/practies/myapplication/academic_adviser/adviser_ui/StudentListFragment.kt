@@ -1,25 +1,27 @@
-package com.practies.myapplication.counsilor.counselorUi
+package com.practies.myapplication.academic_adviser.adviser_ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.practies.myapplication.R
-import com.practies.myapplication.counsilor.adapters.StudentAdapter
+import com.practies.myapplication.academic_adviser.adapters.StudentAdapter
 import com.practies.myapplication.databinding.FragmentStuendentListBinding
 import com.practies.myapplication.interfaces.OnItemClickListeners
+import com.practies.myapplication.viewModels.AdviserViewModel
 
 
 class StudentListFragment : Fragment(),OnItemClickListeners {
-   private  var _binding: FragmentStuendentListBinding?=null
+    private  var _binding: FragmentStuendentListBinding?=null
     private val  binding get() = _binding!!
-private lateinit var studentAdapter: StudentAdapter
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+
+    private lateinit var studentAdapter: StudentAdapter
+    private val viewModel:AdviserViewModel by activityViewModels()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
    _binding= FragmentStuendentListBinding.inflate(inflater,container,false)
 
@@ -28,8 +30,13 @@ private lateinit var studentAdapter: StudentAdapter
     }
 
     private fun setView(){
-        val students= listOf("student1","student2","student3","student4","student5","student6","student7","student8","student9")
-           studentAdapter= StudentAdapter(students,this)
+
+        viewModel.studentsLiveData.observe(viewLifecycleOwner){
+            studentAdapter.differ.submitList(it)
+        }
+           studentAdapter= StudentAdapter(this)
+
+
 
         binding.studentRv.apply {
             layoutManager=LinearLayoutManager(context)

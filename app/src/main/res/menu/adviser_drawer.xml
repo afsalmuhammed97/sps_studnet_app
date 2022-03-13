@@ -23,6 +23,11 @@
             android:id="@+id/reviewerListFragment"
             android:icon="@drawable/profile_icon"
             android:title="@string/reviewer" />
+        <item
+            android:id="@+id/allStudentFragment"
+            android:icon="@drawable/students"
+            android:title="@string/all_students" />
+
 
         <item
             android:id="@+id/schedulesFragment"

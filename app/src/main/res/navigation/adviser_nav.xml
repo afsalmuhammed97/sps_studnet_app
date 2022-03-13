@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cousilorHomeFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.CounselorHomeFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.AdviserHomeFragment"
         android:label=""
         tools:layout="@layout/fragment_cousilor_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/domainFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.DomainFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.DomainFragment"
         android:label=""
         tools:layout="@layout/fragment_domain" >
 
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/stuendentListFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.StudentListFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.StudentListFragment"
         android:label=""
         tools:layout="@layout/fragment_stuendent_list" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/studentViewFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.StudentViewFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.StudentViewFragment"
         android:label=""
         tools:layout="@layout/fragment_student_view" >
 
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/reviewerListFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.ReviewerListFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.ReviewerListFragment"
         android:label=""
         tools:layout="@layout/fragment_reviewer_list" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/schedulesFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.SchedulesFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.SchedulesFragment"
         android:label=""
         tools:layout="@layout/fragment_schedules" />
     <dialog
@@ -98,7 +98,21 @@
     </fragment>
     <fragment
         android:id="@+id/reviewerPageFragment"
-        android:name="com.practies.myapplication.counsilor.counselorUi.ReviewerPageFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.ReviewerPageFragment"
         android:label=""
         tools:layout="@layout/fragment_reviewer_page" />
+    <fragment
+        android:id="@+id/allStudentFragment"
+        android:name="com.practies.myapplication.academic_adviser.adviser_ui.AllStudentsFragment"
+        android:label="fragment_all_student"
+        tools:layout="@layout/fragment_all_student" >
+        <action
+            android:id="@+id/action_allStudentFragment_to_dialogShowFragment"
+            app:destination="@id/dialogShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogShowFragment"
+        android:name="com.practies.myapplication.DialogShowFragment"
+        android:label="fragment_dialog_show"
+        tools:layout="@layout/fragment_dialog_show" />
 </navigation>
